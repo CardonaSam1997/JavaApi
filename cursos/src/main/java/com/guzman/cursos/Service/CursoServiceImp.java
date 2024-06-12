@@ -1,6 +1,10 @@
 package com.guzman.cursos.Service;
-import com.guzman.cursos.Entity.Curso;
+import com.guzman.cursos.Repository.CursoUsuarioRepository;
+import com.guzman.cursos.client.UsuarioClientRest;
+import com.guzman.cursos.models.Entity.Curso;
 import com.guzman.cursos.Repository.CursoRepository;
+import com.guzman.cursos.models.Entity.CursoUsuario;
+import com.guzman.cursos.models.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,6 +14,9 @@ import java.util.Optional;
 
 @Service
 public class CursoServiceImp implements CursoService{
+    @Autowired
+    private UsuarioClientRest usuarioClientRest;
+
     @Autowired
     private CursoRepository cursoRepository;
 
@@ -36,4 +43,68 @@ public class CursoServiceImp implements CursoService{
     public void eliminar(int id) {
         cursoRepository.deleteById(id);
     }
+
+
+    //METODOS DE LA TABLA INTERMEDIA
+    @Override
+    @Transactional
+    public Optional<Usuario> crearUsuario(Usuario usuario, Integer idCurso) {
+        Optional<Curso> cursoOptional = cursoRepository.findById(idCurso);
+        if(cursoOptional.isPresent()){
+            Usuario usuarioMsvc = usuarioClientRest.guardar(usuario);
+
+            Curso curso = cursoOptional.get();
+            CursoUsuario cursoUsuario = new CursoUsuario();
+            cursoUsuario.setIdusuario(usuarioMsvc.getId());
+            //en que momento estamos agregando el id del curso??
+            curso.addCursoUsuario(cursoUsuario);
+            cursoRepository.save(curso);
+            return Optional.of(usuarioMsvc);
+        }
+        return Optional.empty();
+    }
+
+    @Override
+    @Transactional
+    public Optional<Usuario> asignarUsuario(Usuario usuario, Integer idCurso) {
+        Optional<Curso> cursoOptional = cursoRepository.findById(idCurso);
+        if(cursoOptional.isPresent()){
+            Usuario usuarioMsvc = usuarioClientRest.UsuarioPorId(usuario.getId());
+
+            Curso curso = cursoOptional.get();
+            CursoUsuario cursoUsuario = new CursoUsuario();
+            cursoUsuario.setIdusuario(usuarioMsvc.getId());
+            //en que momento estamos agregando el id del curso??
+            curso.addCursoUsuario(cursoUsuario);
+            cursoRepository.save(curso);
+            return Optional.of(usuarioMsvc);
+        }
+        return Optional.empty();
+    }
+
+    @Override
+    @Transactional
+    public Optional<Usuario> eliminarUsuario(Usuario usuario, Integer idCurso) {
+        Optional<Curso> cursoOptional = cursoRepository.findById(idCurso);
+        if(cursoOptional.isPresent()){
+            Usuario usuarioMsvc = usuarioClientRest.UsuarioPorId(usuario.getId());
+
+            Curso curso = cursoOptional.get();
+            CursoUsuario cursoUsuario = new CursoUsuario();
+            cursoUsuario.setIdusuario(usuarioMsvc.getId());
+            //en que momento estamos agregando el id del curso??
+            curso.removeCursoUsuario(cursoUsuario);
+            cursoRepository.save(curso);
+            return Optional.of(usuarioMsvc);
+        }
+        return Optional.empty();
+
+    }
+
+    @Override
+    @Transactional
+    public void eliminarCursoUsuarioPorId(Integer id) {
+        cursoRepository.eliminarCursoUsuarioPorId(id);
+    }
+
 }

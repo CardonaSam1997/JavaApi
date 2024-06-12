@@ -1,0 +1,23 @@
+2024-06-08T22:06:22.267Z  INFO 1 --- [usuarios] [main] c.guzman.usuarios.UsuariosApplication    : Starting UsuariosApplication v0.0.1-SNAPSHOT using Java 21 with PID 1 (/app/usuarios-0.0.1-SNAPSHOT.jar started by root in /app)
+2024-06-08T22:06:22.278Z  INFO 1 --- [usuarios] [main] c.guzman.usuarios.UsuariosApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-06-08T22:06:25.603Z  INFO 1 --- [usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-08T22:06:25.814Z  INFO 1 --- [usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 174 ms. Found 1 JPA repository interface.
+2024-06-08T22:06:26.531Z  INFO 1 --- [usuarios] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=af5a25b8-6521-3744-9ff8-334f3972e6aa
+2024-06-08T22:06:27.825Z  INFO 1 --- [usuarios] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8001 (http)
+2024-06-08T22:06:27.876Z  INFO 1 --- [usuarios] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-08T22:06:27.877Z  INFO 1 --- [usuarios] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-08T22:06:28.007Z  INFO 1 --- [usuarios] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-08T22:06:28.008Z  INFO 1 --- [usuarios] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5403 ms
+2024-06-08T22:06:28.563Z  INFO 1 --- [usuarios] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-08T22:06:28.743Z  INFO 1 --- [usuarios] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-08T22:06:28.846Z  INFO 1 --- [usuarios] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-08T22:06:29.551Z  INFO 1 --- [usuarios] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-08T22:06:29.635Z  INFO 1 --- [usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-08T22:06:30.266Z  INFO 1 --- [usuarios] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b3a9ef4
+2024-06-08T22:06:30.278Z  INFO 1 --- [usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-08T22:06:30.535Z  WARN 1 --- [usuarios] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-08T22:06:32.514Z  INFO 1 --- [usuarios] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-08T22:06:32.630Z  INFO 1 --- [usuarios] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-08T22:06:34.015Z  WARN 1 --- [usuarios] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-08T22:06:35.890Z  INFO 1 --- [usuarios] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8001 (http) with context path ''
+2024-06-08T22:06:35.942Z  INFO 1 --- [usuarios] [main] c.guzman.usuarios.UsuariosApplication    : Started UsuariosApplication in 15.197 seconds (process running for 17.264)

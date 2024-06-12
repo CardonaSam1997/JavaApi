@@ -13,19 +13,23 @@ import java.util.*;
 @RestController
 @RequestMapping("Usuarios")
 public class UsuarioController {
+
+
+
     @Autowired
     private UsuarioServiceImp usuarioService;
 
     @PostMapping
     //@ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<?> guardar(@RequestBody @Valid Usuario usuario, BindingResult result){//bindinresult debe ir despues del objeto que queremos validar
-        if(result.hasErrors()){//verificar si hay errores
+        if(result.hasErrors()){//verificar si hay errores en base a las anotaciones de validacion
             return validarErores(result);
         }
         
         if(usuarioService.verificarEmail(usuario.getEmail()).isPresent()){
             return ResponseEntity.badRequest().body(Collections.singletonMap("error","El correo ya existe"));
         }
+
         if(usuarioService.verificarUsuario(usuario.getUser()).isPresent()){
             return ResponseEntity.badRequest().body(Collections.singletonMap("error","El usuario ya existe"));
         }
@@ -74,9 +78,16 @@ public class UsuarioController {
         Optional<Usuario> optionalUsuario = usuarioService.porId(id);
         if(optionalUsuario.isPresent()){
             usuarioService.eliminarUsuario(id);
+            //realmente la respuesta a una eliminacion es noContent?
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.notFound().build();
+    }
+
+    @GetMapping("/usuarios-por-cursos")
+    //el nombre del requestParam es el parametro que se debe poner en la url para poder pasar los datos
+    public ResponseEntity<?> obtenerUsuariosPorCurso(@RequestParam(name = "ids") List<Integer> listaIds){
+        return ResponseEntity.ok(usuarioService.obtenerTodosPorId(listaIds));
     }
 
     private static ResponseEntity<Map<String, String>> validarErores(BindingResult result) {

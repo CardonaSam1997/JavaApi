@@ -12,7 +12,8 @@ public interface UsuarioRepository extends JpaRepository<Usuario,Integer> {
     /*
     Recuerda que hay dos tipos de consultas personalizadas en java
     la primera con unas palabras claves que las podemos encontrar en la guia de jpa data
-    y la segunda es para consultas mas complejas en el cual podemos escribir codigo SQL
+    y la segunda es para consultas mas complejas en el cual podemos escribir codigo SQL con
+    la anotacion @Query(sentencia SQL)
      */
 
     //RECORDAR USAR OPTIONAL PARA PODER VALIR LA EXISTENCIA DEL OBJETO

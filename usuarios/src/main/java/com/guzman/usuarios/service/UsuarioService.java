@@ -12,6 +12,8 @@ public interface UsuarioService {
 
     List<Usuario> obtenerUsuarios();
 
+    List<Usuario> obtenerTodosPorId(Iterable<Integer> lista);
+
     void eliminarUsuario(int id);
 
     Optional<Usuario> verificarEmail(String email);

@@ -1,4 +1,5 @@
 package com.guzman.usuarios.service;
+import com.guzman.usuarios.client.CursoClientRest;
 import com.guzman.usuarios.entity.Usuario;
 import com.guzman.usuarios.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,9 @@ public class UsuarioServiceImp implements UsuarioService {
 
     @Autowired
     private UsuarioRepository usuarioRepository;
+
+    @Autowired
+    private CursoClientRest cursoClientRest;
 
     @Override
     @Transactional
@@ -35,9 +39,18 @@ public class UsuarioServiceImp implements UsuarioService {
     }
 
     @Override
+    public List<Usuario> obtenerTodosPorId(Iterable<Integer> lista) {
+        return usuarioRepository.findAllById(lista); //casteo? (List<Usuario>)
+    }
+
+    @Override
     @Transactional
     public void eliminarUsuario(int id){
+        /*Tiene logica, Si se elimina el usuario se debe de eliminar la relacion entre
+        el usuario y el curso
+         */
         usuarioRepository.deleteById(id);
+        cursoClientRest.eliminarCursoUsuarioPorId(id);
     }
 
     @Override
