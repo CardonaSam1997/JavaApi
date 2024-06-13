@@ -1,7 +1,13 @@
 package com.guzman.cursos.models;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
+
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Usuario {
     private Integer id;
     private String name;

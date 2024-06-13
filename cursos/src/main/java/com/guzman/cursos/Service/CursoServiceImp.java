@@ -55,7 +55,7 @@ public class CursoServiceImp implements CursoService{
 
             Curso curso = cursoOptional.get();
             CursoUsuario cursoUsuario = new CursoUsuario();
-            cursoUsuario.setIdusuario(usuarioMsvc.getId());
+            cursoUsuario.setIdusuario(usuarioMsvc);
             //en que momento estamos agregando el id del curso??
             curso.addCursoUsuario(cursoUsuario);
             cursoRepository.save(curso);
@@ -73,7 +73,7 @@ public class CursoServiceImp implements CursoService{
 
             Curso curso = cursoOptional.get();
             CursoUsuario cursoUsuario = new CursoUsuario();
-            cursoUsuario.setIdusuario(usuarioMsvc.getId());
+            cursoUsuario.setIdusuario(usuarioMsvc);
             //en que momento estamos agregando el id del curso??
             curso.addCursoUsuario(cursoUsuario);
             cursoRepository.save(curso);
@@ -91,7 +91,7 @@ public class CursoServiceImp implements CursoService{
 
             Curso curso = cursoOptional.get();
             CursoUsuario cursoUsuario = new CursoUsuario();
-            cursoUsuario.setIdusuario(usuarioMsvc.getId());
+            cursoUsuario.setIdusuario(usuarioMsvc);
             //en que momento estamos agregando el id del curso??
             curso.removeCursoUsuario(cursoUsuario);
             cursoRepository.save(curso);

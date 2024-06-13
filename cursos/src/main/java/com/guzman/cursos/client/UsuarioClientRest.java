@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
-@FeignClient(name = "usuarios", url = "usuariosprueba:8001/Usuarios")
+@FeignClient(name = "usuarios", url = "localhost:8001/Usuarios")
 //el name hace referencia al nombre del microservicio que se va consumir
 public interface UsuarioClientRest {
 /*
