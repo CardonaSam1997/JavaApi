@@ -1,7 +1,12 @@
 package com.guzman.cursos;
 
+import com.guzman.cursos.models.Usuario;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.w3c.dom.stylesheets.LinkStyle;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @SpringBootTest
 class CursosApplicationTests {
@@ -23,4 +28,13 @@ class CursosApplicationTests {
 		}
 	}
 	//lo mismo pero con recursividad
+
+	@Test
+	public void pruebaList(){
+		List<Usuario> p = new ArrayList<>();
+		p.add(new Usuario("juan"));
+		p.add(new Usuario("pedro"));
+
+		System.out.println(p.get(1));
+	}
 }

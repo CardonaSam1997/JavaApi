@@ -1,6 +1,7 @@
 package com.guzman.cursos.models.Entity;
 
 import com.guzman.cursos.Repository.CursoUsuarioRepository;
+import com.guzman.cursos.models.Usuario;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,12 +10,7 @@ import lombok.Data;
 @Table(name = "Cursos_usuarios")
 @Data
 public class CursoUsuario {
-    /*
-    Creo que aqui tengo un error,
-    esta clase solo tiene 2 propiedades
-    su id y el id del usuario, pero creo que le hace falta
-    indicar el id de curso
-     */
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -22,8 +18,9 @@ public class CursoUsuario {
     @Column(name = "id_usuario_CU", unique = true)
     private Integer idusuario;
 
-    //el equals se modifico para que su verficiacion fuera por el idUusuario
-    // y no por instancia del objeto
+    @Transient
+    private Usuario usuario;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true; //si la instancia es la misma
@@ -33,5 +30,4 @@ public class CursoUsuario {
         CursoUsuario ob = (CursoUsuario) o;
         return this.idusuario != null && this.idusuario.equals(ob.idusuario);
     }
-
 }

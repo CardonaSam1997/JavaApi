@@ -32,6 +32,14 @@ public class CursoServiceImp implements CursoService{
         return cursoRepository.findById(id);
     }
 
+    public Curso porId2(int id) {
+        Curso curso = cursoRepository.findById(id).get();
+        Usuario usuario = usuarioClientRest.UsuarioPorId(curso.getCursoUsuarioList().get(0).getIdusuario());
+        curso.getCursoUsuarioList().get(0).setUsuario(usuario);
+    //    cursoRepository.findAllById(); //FUNCIONA PERO HAY QUE MEJORARLO
+        return curso;
+    }
+
     @Override
     @Transactional
     public Curso guardar(Curso curso) {

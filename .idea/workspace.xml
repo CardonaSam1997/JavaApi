@@ -5,33 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="726fe79f-4c0c-47b4-b28b-eec7fcd9ffff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cursos/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/Repository/CursoUsuarioRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/client/UsuarioClientRest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/models/Entity/Curso.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/models/Entity/CursoUsuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/models/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usuarios/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/client/CursoClientRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/Controller/CursoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/Controller/CursoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/CursosApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/CursosApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/Entity/Curso.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/Repository/CursoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/Repository/CursoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/Service/CursoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/Service/CursoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/Service/CursoServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/Service/CursoServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/client/UsuarioClientRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/client/UsuarioClientRest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/models/Entity/Curso.java" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/models/Entity/Curso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/models/Entity/CursoUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/models/Entity/CursoUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/models/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/models/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cursos/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cursos/src/test/java/com/guzman/cursos/CursosApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/src/test/java/com/guzman/cursos/CursosApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/UsuariosApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/UsuariosApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/entity/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/repository/UsuarioRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/service/UsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/service/UsuarioServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/service/UsuarioServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/client/CursoClientRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/client/CursoClientRest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usuarios/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +31,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="rama1" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -67,6 +55,7 @@
     "Application.CursosApplication.executor": "Run",
     "Application.UsuariosApplication.executor": "Run",
     "JUnit.CursosApplicationTests.fibonaci.executor": "Run",
+    "JUnit.CursosApplicationTests.pruebaList.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "rama1",
@@ -122,11 +111,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CursosApplicationTests.pruebaList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cursos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.guzman.cursos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.guzman.cursos" />
+      <option name="MAIN_CLASS_NAME" value="com.guzman.cursos.CursosApplicationTests" />
+      <option name="METHOD_NAME" value="pruebaList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.CursosApplication" />
         <item itemvalue="Application.UsuariosApplication" />
+        <item itemvalue="JUnit.CursosApplicationTests.pruebaList" />
         <item itemvalue="JUnit.CursosApplicationTests.fibonaci" />
+        <item itemvalue="Application.CursosApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -140,5 +147,16 @@
       <updated>1715201144249</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

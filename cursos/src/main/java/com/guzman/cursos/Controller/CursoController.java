@@ -46,6 +46,12 @@ public class CursoController {
     no funciona, crea y luego actualiza, ojo
     por eso hay que poner solo el objeto de tipo curso
      */
+    @GetMapping("/p/{id}")
+    public Curso poridPrueba(@PathVariable int id){
+         return cursoServiceImp.porId2(id);
+    }
+
+
     @PutMapping("{id}")
     public ResponseEntity<?> editar(@RequestBody Curso curso, BindingResult result,@PathVariable int id) {
         if (result.hasErrors()) {
