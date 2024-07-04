@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="726fe79f-4c0c-47b4-b28b-eec7fcd9ffff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cursos/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usuarios/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/Controller/CursoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/Controller/CursoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/Service/CursoServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/Service/CursoServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/client/UsuarioClientRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/client/UsuarioClientRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/models/Entity/Curso.java" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/models/Entity/Curso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/models/Entity/CursoUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/models/Entity/CursoUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/models/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/src/main/java/com/guzman/cursos/models/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cursos/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/client/CursoClientRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/client/CursoClientRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/service/UsuarioServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/src/main/java/com/guzman/usuarios/service/UsuarioServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="726fe79f-4c0c-47b4-b28b-eec7fcd9ffff" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +46,7 @@
     "JUnit.CursosApplicationTests.pruebaList.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "rama1",
+    "git-widget-placeholder": "Merging rama1",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Cardona/Documents/Spring initcializer - PROYECTOS/Docker y kubernate",
