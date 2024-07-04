@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class UsuarioServiceImp implements UsuarioService {
@@ -61,6 +62,14 @@ public class UsuarioServiceImp implements UsuarioService {
 
     public Optional<Usuario> verificarUsuario(String user){
         return usuarioRepository.findByUser(user);
+    }
+
+    public List<Usuario> listaPorId(List<Integer> ids){
+        // Extraer los ids de la lista de usuarios
+
+
+        // Obtener la lista de usuarios por los ids
+        return usuarioRepository.findAllById(ids);
     }
 
 }

@@ -9,7 +9,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.*;
 
 @RestController
@@ -41,16 +40,6 @@ public class CursoController {
         }
         return ResponseEntity.notFound().build();
     }
-
-    /*
-    no funciona, crea y luego actualiza, ojo
-    por eso hay que poner solo el objeto de tipo curso
-     */
-    @GetMapping("/p/{id}")
-    public Curso poridPrueba(@PathVariable int id){
-         return cursoServiceImp.porId2(id);
-    }
-
 
     @PutMapping("{id}")
     public ResponseEntity<?> editar(@RequestBody Curso curso, BindingResult result,@PathVariable int id) {
@@ -139,6 +128,17 @@ public class CursoController {
         return ResponseEntity.ok().build();
     }
 
+@GetMapping("/prueba999")
+    public List<Curso> obtenerTodosCompletos(){
+    System.out.println("${config.url.client}");
+        List<Curso> cursos = new ArrayList<>();
+        try{
+            cursos = cursoServiceImp.obtenerTodosCompletos();
+        }catch (ClassCastException e){
+            System.err.println(e.getMessage());
+        }
+        return cursos;
+    }
 
     private static ResponseEntity<Map<String, String>> validarErores(BindingResult result) {
         //convertir a JSON

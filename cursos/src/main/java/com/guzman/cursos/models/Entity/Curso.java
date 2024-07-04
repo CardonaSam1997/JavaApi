@@ -1,4 +1,5 @@
 package com.guzman.cursos.models.Entity;
+import com.guzman.cursos.models.Usuario;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
@@ -24,10 +25,12 @@ public class Curso {
     @JoinColumn(name = "id_cursos")
     private List<CursoUsuario> cursoUsuarioList;
 
-    //CONSTRUCTOR
+    @Transient
+    private List<Usuario> usuarios;
+
     public Curso(){
         cursoUsuarioList = new ArrayList<>();
-        //usuarioList = new ArrayList<>();
+        usuarios = new ArrayList<>();
     }
 
     public void addCursoUsuario(CursoUsuario cursoUsuario){

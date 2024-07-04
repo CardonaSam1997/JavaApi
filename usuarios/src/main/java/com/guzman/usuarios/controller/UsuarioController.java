@@ -14,10 +14,13 @@ import java.util.*;
 @RequestMapping("Usuarios")
 public class UsuarioController {
 
-
-
     @Autowired
     private UsuarioServiceImp usuarioService;
+
+    @PostMapping("/listarTodos")
+    public List<Usuario> listaPorId(@RequestBody List<Integer> ids){
+        return usuarioService.listaPorId(ids);
+    }
 
     @PostMapping
     //@ResponseStatus(HttpStatus.CREATED)
@@ -43,6 +46,8 @@ public class UsuarioController {
         if(optionalUsuario.isPresent()){
             return ResponseEntity.ok(optionalUsuario.get());
         }
+        String var = "${P:hola}";
+        System.err.println(var);
         return ResponseEntity.notFound().build();
     }
 
@@ -86,8 +91,8 @@ public class UsuarioController {
 
     @GetMapping("/usuarios-por-cursos")
     //el nombre del requestParam es el parametro que se debe poner en la url para poder pasar los datos
-    public ResponseEntity<?> obtenerUsuariosPorCurso(@RequestParam(name = "ids") List<Integer> listaIds){
-        return ResponseEntity.ok(usuarioService.obtenerTodosPorId(listaIds));
+    public List<Usuario> obtenerUsuariosPorCurso(@RequestParam(name = "ids") List<Integer> listaIds){
+        return usuarioService.obtenerTodosPorId(listaIds);
     }
 
     private static ResponseEntity<Map<String, String>> validarErores(BindingResult result) {

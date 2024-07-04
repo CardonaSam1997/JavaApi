@@ -5,24 +5,22 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
-@FeignClient(name = "usuarios", url = "localhost:8001/Usuarios")
+@FeignClient(name = "usuarios", url = "${config.url.client}")
 //el name hace referencia al nombre del microservicio que se va consumir
 public interface UsuarioClientRest {
-/*
-El nombre puede ser cualquiera o el mismo, pero la firma debe ser la misma
- */
 
+    @PostMapping("/listarTodos")
+    public List<Usuario> listaPorId(@RequestBody List<Integer> ids);
 
     @GetMapping("/{id}")
     Usuario UsuarioPorId(@PathVariable int id);
-    //public ResponseEntity<?> UsuarioPorId(@PathVariable int id){
 
     @PostMapping
     Usuario guardar(@RequestBody Usuario usuario); //la validacion bindingResult se hace en el controlador
-    //public ResponseEntity<?> guardar(@RequestBody @Valid Usuario usuario, BindingResult result){//bindinresult debe ir despues del objeto que queremos validar
 
 
+
+//no se puede castear, necesito modificar esto desde el controlador de usuarios para que me retorne una lista de usuarios
     @GetMapping("/usuarios-por-cursos")
-    //el nombre del requestParam es el parametro que se debe poner en la url para poder pasar los datos
-    public ResponseEntity<?> obtenerUsuariosPorCurso(@RequestParam(name = "ids") List<Integer> listaIds);
+    public List<Usuario> obtenerUsuariosPorCurso(@RequestParam(name = "ids") List<Integer> listaIds);
 }

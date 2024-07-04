@@ -1,0 +1,61 @@
+version: "3.9"
+services:
+  #CONFIGURACIÓN BASES DE DATOS
+  container-mysql:
+    image: mysql:8
+    ports:
+      - "3305:3306"
+    environment:
+      #Asi MYSQL_ROOT_PASSWORD: 1234 o asi MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=usuarios
+    volumes:
+      - data-mysql:/var/lib/mysql
+    restart: always
+    networks:
+      - spring
+
+  container-postgres:
+    image: postgres
+    ports:
+      - "5433:5432"
+    environment:
+      #Asi MYSQL_ROOT_PASSWORD: 1234 o asi MYSQL_ROOT_PASSWORD=1234
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=cursos
+    volumes:
+      - data-postgres:/var/lib/postgresql/data
+    restart: always
+    networks:
+      - spring
+#CONFIGURACIONES CONTENEDORES MICROSERVICIOS
+  container-cursos:
+    image: msvc-cursos:v1
+    ports:
+      - "8002:8002"
+    env_file: ./cursos/.env
+    networks:
+      - spring
+    depends_on:
+      - container-postgres
+    restart: always
+
+  container-usuarios:
+    image: msvc-usuarios:v1
+    ports:
+      - "8001:8001"
+    env_file: ./usuarios/.env
+    networks:
+      - spring
+    depends_on:
+      - container-mysql
+    restart: always
+
+
+#CONFIGURACIONES PREVIAS
+volumes:
+  data-mysql:
+  data-postgres:
+
+networks:
+  spring:
